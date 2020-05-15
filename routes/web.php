@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 Route::get('/login','WebController@getLogin');
 Route::get('/register','WebController@getRegister');
+
+Route::group(['prefix'=>'as4'],function (){
+    Route::get('','assigment4\Ass4Controller@login');
+    Route::get('/register','assigment4\Ass4Controller@Register');
+    Route::get('/forgot','assigment4\Ass4Controller@Forgot');
+});
